@@ -163,7 +163,7 @@ class MessagePublisher implements IMessagePublisher
      */
     protected function getMessageId()
     {
-        return (float)(microtime(true) . mt_rand(0, 10000));
+        return md5(uniqid("", true), true);
     }
 
     /**
